@@ -1,0 +1,292 @@
+:root {
+    --main-color: #f70776;
+    --shadow-color: rgba(247, 7, 118, 0.7);
+    --transition: .6s;
+}
+
+body {
+    background: linear-gradient(45deg, #132743, #5585b5);
+    font-family: 'Nerko One', cursive;
+    color:white;
+    /* font-weight: bold; */
+}
+.active{
+    color: var(--main-color) !important;
+}
+/* start navbar */
+.navbar:hover{
+width: 35%;
+background-color: rgba(0, 0, 0,.6) !important;
+transition: var(--transition) !important;
+z-index: 1;
+}
+
+.navbar-brand img{
+    width: 70px !important;
+}
+
+.brand{
+    /* position:fixed;
+    top: 30%;
+    right: 0; */
+    /* animation: logo var(--transition) infinite alternate; */
+    animation: logo 1s infinite alternate;
+
+}
+@keyframes logo {
+    0%{
+        transform: rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+.nav-link:hover{
+color: var(--main-color) !important;
+}
+.dropdown-menu[data-bs-popper]{
+    
+    top: 32%;
+    left:-160px;
+}
+.dropdown-item:hover{
+    color: black;
+    background-color: var(--main-color);
+}
+
+/* start banner */
+.banner{
+    background-image: url('/assets/images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay{
+    background: linear-gradient(90deg, var(--shadow-color), black);
+}
+.btn-banner{
+    border:1px solid var(--main-color);
+    color:white;
+    background-color: rgba(0, 0, 0,.1);
+}
+
+/* start about */
+.about-caption h3::after{
+    content: '';
+    /* text-transform: uppercase; */
+    position: absolute;
+    left:0;
+    bottom: -10%;
+    width: 100%;
+    height: .08rem;
+    background-color: var(--main-color); 
+}
+.item::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, var(--shadow-color), black);
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    bottom:50%;
+    transition: var(--transition);
+}
+.item::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, var(--shadow-color), black);
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top:50%;
+    transition: var(--transition);
+}
+.item:hover.item::after {
+    transform: skewX(90deg); 
+}
+.item:hover.item::before {
+    transform: skewX(90deg); 
+}
+
+/* start racing */
+.race-caption h3::after{
+    content: '';
+    /* text-transform: uppercase; */
+    position: absolute;
+    left:0;
+    bottom: -10%;
+    width: 100%;
+    height: .08rem;
+    background-color: var(--main-color);
+    
+}
+.item-race::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, var(--shadow-color), black);
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    top:100%;
+    transition: var(--transition) var(--transition);
+}
+.item-race:hover.item-race::before {
+top:0%
+}
+.btn-race{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    opacity: 0;
+    transition: var(--transition) var(--transition) ;
+}
+.item-race:hover .btn-race{
+opacity: 1;
+}
+.btn-race:hover{
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+}
+/* start Zombie */
+.Zombie-caption h3::after{
+    content: '';
+    /* text-transform: uppercase; */
+    position: absolute;
+    left:0;
+    bottom: -10%;
+    width: 100%;
+    height: .08rem;
+    background-color: var(--main-color);
+    
+}
+.item-zombie::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, var(--shadow-color), black);
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    top:100%;
+    transition: var(--transition) var(--transition);
+}
+.item-zombie:hover.item-zombie::before {
+top:0%
+}
+.btn-zombie{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    opacity: 0;
+    transition: var(--transition) var(--transition) ;
+}
+.item-zombie:hover .btn-zombie{
+opacity: 1;
+}
+.btn-zombie:hover{
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+}
+/* start action */
+.action-caption h3::after{
+    content: '';
+    /* text-transform: uppercase; */
+    position: absolute;
+    left:0;
+    bottom: -10%;
+    width: 100%;
+    height: .08rem;
+    background-color: var(--main-color);
+    
+}
+.item-action::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, var(--shadow-color), black);
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    bottom:100%;
+    transition: var(--transition) var(--transition);
+}
+.item-action:hover.item-action::before {
+bottom:0%
+}
+.btn-action{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    opacity: 0;
+    transition: var(--transition) var(--transition) ;
+}
+.item-action:hover .btn-action{
+opacity: 1;
+}
+.btn-action:hover{
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+}
+
+/* start contact */
+/* .contact-us{
+    width: 75%;
+} */
+.contact-caption{
+    text-shadow: 4px 4px 4px black;
+}
+.contact-caption h3::before{
+    content: '';
+    /* text-transform: uppercase; */
+    position: absolute;
+    left:0;
+    bottom: -10%;
+    width: 100%;
+    height: .08rem;
+    background-color: var(--main-color);  
+}
+input{
+    outline: none;
+}
+.form-control:focus{
+    color:var(--main-color);
+border:3px solid var(--main-color) !important;
+box-shadow: 2px 2px 10px var(--shadow-color);
+outline: none !important;
+
+}
+.btn-contact{
+    z-index: 1;
+}
+.btn-contact::before{
+        content: '';
+        position: absolute;
+        background-color: rgba(247, 7, 118, 1);
+        width: 100%;
+        height: 100%;
+        right: 100%;
+        bottom:5%;
+        transition: var(--transition);
+        border-radius: .4rem;
+        z-index: -1;
+
+
+}
+.btn-contact:hover.btn-contact::before {
+    right:0%;
+    }
