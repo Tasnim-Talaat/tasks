@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/style/all.min.css">
+        <link rel="stylesheet" href="assets/style/main.css">
+        <title>Day2</title>
+</head>
+<body>
+        <div class="container">
+<div class="head">
+    <h1 class="position-relative"> <span class="active">CRUDS</span> Operating System</h1>   
+</div>
+<div class="form my-5">
+        
+        <label for="">PRODUCT NAME</label>
+        <input type="text" class="form-control mb-3" id="name">
+
+
+        <label for="">PRODUCT PRICE</label>
+        <input type="number" class="form-control mb-3" id="price">
+
+        
+        <label for="">PRODUCT CATEGORY</label>
+        <input type="text" class="form-control mb-3" id="cat">
+
+        
+        <label for="">PRODUCT DESCRIPTION</label>
+        <input type="text" class="form-control mb-3" id="desc">
+
+        <button class="btn btn-success text-dark mb-3" onclick="getData()">Add Product</button>
+
+        <input type="search" class="form-control mb-3" placeholder="search..">
+
+
+            <table class="table">
+                <thead>
+                  <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>category</th>
+                        <th>Desc</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                  </tr>
+                </thead>
+                <tbody id="info">
+                
+              
+                </tbody>
+              </table>
+
+</div>
+</div>
+        <footer class="footer bg-dark py-2 d-flex justify-content-center align-items-center ">
+                <div class="copyright text-center">
+              <p class="text-white">copyright ©Reserved <span class="active">Tasnim Talaat</span> </p>
+              <i class="fa-brands fa-linkedin-in text-white  "></i>
+              
+              </div>
+              
+              </footer><script src="./assets/js/index.js"></script> 
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
