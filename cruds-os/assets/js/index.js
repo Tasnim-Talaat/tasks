@@ -145,9 +145,8 @@ function searchProduct(term){
         else{
                 // showProducts=`<tr> <td colspan='6'><p class="text-danger text-center fw-bold" id="emp">Empty....!</p></td></tr>`
                 //         document.getElementById('emp').classList.remove('d-none')
-                        document.getElementById('emp').innerHTML=`<tr>
-                        <span>Empty....!</span>
-                    </tr>`
+                        document.getElementById('emp').innerHTML=`
+                        <span>Empty....!</span>`
                 }
 
         document.getElementById('info').innerHTML =showProducts
