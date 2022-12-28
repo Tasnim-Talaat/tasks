@@ -15,26 +15,29 @@
     <h1 class="position-relative"> <span class="active">CRUDS</span> Operating System</h1>   
 </div>
 <div class="form my-5">
-        
+        <div id="errorform"></div>
         <label for="">PRODUCT NAME</label>
         <input type="text" class="form-control mb-3" id="name">
 
 
-        <label for="">PRODUCT PRICE</label>
+        <label for="price">PRODUCT PRICE</label>
         <input type="number" class="form-control mb-3" id="price">
 
         
-        <label for="">PRODUCT CATEGORY</label>
+        <label for="cat">PRODUCT CATEGORY</label>
         <input type="text" class="form-control mb-3" id="cat">
 
         
-        <label for="">PRODUCT DESCRIPTION</label>
+        <label for="desc">PRODUCT DESCRIPTION</label>
         <input type="text" class="form-control mb-3" id="desc">
 
-        <button class="btn btn-success text-dark mb-3" onclick="getData()">Add Product</button>
+        <button class="btn btn-info text-dark mb-3" onclick="getData()" id="addBtn">Add Product</button>
+        <button class="btn btn-success text-dark mb-3 d-none" id="updateBtn" onclick="updateProduct()" >Update Product</button>
+        <p class="text-danger text-center  fw-bold" id="emp"></p>
 
-        <input type="search" class="form-control mb-3" placeholder="search..">
+        <input type="search" class="form-control mb-3" placeholder="search.." oninput="searchProduct(this.value)">
 
+        <div id="error"></div>
 
             <table class="table">
                 <thead>
@@ -48,7 +51,6 @@
                   </tr>
                 </thead>
                 <tbody id="info">
-                
               
                 </tbody>
               </table>
