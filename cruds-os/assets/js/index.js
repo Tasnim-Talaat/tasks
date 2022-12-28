@@ -92,38 +92,70 @@ var productIndex=0;
 //     updateBtn.classList.add('d-none')
 //         }
 // }
+    var nameUpdate;
+    var priceUpdate;
+    var catUpdate
+    var descUpdate
+    var btnupdate
+    var btnsav
 function setProduct(id){
-        productIndex=id; 
-        document.getElementById('nameUpdate').classList.remove('d-none')
-        document.getElementById('priceUpdate').classList.remove('d-none')
-        document.getElementById('catUpdate').classList.remove('d-none')
-        document.getElementById('descUpdate').classList.remove('d-none')
-        document.getElementById('nameProduct').classList.add('d-none')
-        document.getElementById('priceProduct').classList.add('d-none')
-        document.getElementById('catProduct').classList.add('d-none')
-        document.getElementById('descProduct').classList.add('d-none')
+        productIndex=id;
+         nameUpdate= document.getElementById("info").rows[id].children[0]
+         priceUpdate= document.getElementById("info").rows[id].children[1]
+         catUpdate= document.getElementById("info").rows[id].children[2]
+         descUpdate= document.getElementById("info").rows[id].children[3]
+         btnupdate= document.getElementById("info").rows[id].children[5].children[0]
+         btnsave= document.getElementById("info").rows[id].children[5].children[1]
+        console.log(document.getElementById("info").rows[id].children[5]
+        );
+        nameUpdate.children[1].classList.remove('d-none')
+        priceUpdate.children[1].classList.remove('d-none')
+        catUpdate.children[1].classList.remove('d-none')
+        descUpdate.children[1].classList.remove('d-none')
 
-               document.getElementById('nameUpdate').value=products[id].names
-        document.getElementById('priceUpdate').value=products[id].prices
-       document.getElementById('catUpdate').value=products[id].cat
-        document.getElementById('descUpdate').value=products[id].desc
+        nameUpdate.children[0].classList.add('d-none')
+        priceUpdate.children[0].classList.add('d-none')
+        catUpdate.children[0].classList.add('d-none')
+        descUpdate.children[0].classList.add('d-none')
+
+
+        nameUpdate.children[1].value=products[id].names
+        priceUpdate.children[1].value=products[id].prices
+        catUpdate.children[1].value=products[id].cat
+        descUpdate.children[1].value=products[id].desc
+        btnupdate.classList.add('d-none')
+        btnsave.classList.remove('d-none')
+
+        // document.getElementById('nameUpdate').classList.remove('d-none')
+        // document.getElementById('priceUpdate').classList.remove('d-none')
+        // document.getElementById('catUpdate').classList.remove('d-none')
+        // document.getElementById('descUpdate').classList.remove('d-none')
+        // document.getElementById('nameProduct').classList.add('d-none')
+        // document.getElementById('priceProduct').classList.add('d-none')
+        // document.getElementById('catProduct').classList.add('d-none')
+        // document.getElementById('descProduct').classList.add('d-none')
+
+    //            document.getElementById('nameUpdate').value=products[id].names
+    //     document.getElementById('priceUpdate').value=products[id].prices
+    //    document.getElementById('catUpdate').value=products[id].cat
+    //     document.getElementById('descUpdate').value=products[id].desc
         
-        document.getElementById('updatebttn').classList.add('d-none')
-        document.getElementById('savebtn').classList.remove('d-none')
+        // document.getElementById('updatebttn').classList.add('d-none')
+        // document.getElementById('savebtn').classList.remove('d-none')
 }
 
 function updateProduct(){
         if(validtionNameProductUpdate() ==true && validtionPriceProductUpdate() == true && validtionCatProductUpdate() == true && validtionDescProductUpdate() ==true  ){
 
-        products[productIndex].names=document.getElementById('nameUpdate').value
-        products[productIndex].prices=document.getElementById('priceUpdate').value
-        products[productIndex].cat=document.getElementById('catUpdate').value
-        products[productIndex].desc=document.getElementById('descUpdate').value
+        products[productIndex].names=nameUpdate.children[1].value
+        products[productIndex].prices=priceUpdate.children[1].value
+        products[productIndex].cat=catUpdate.children[1].value
+        products[productIndex].desc=descUpdate.children[1].value
         localStorage.setItem('products',JSON.stringify(products))
         display();
         clearProduct();
-        document.getElementById('updatebttn').classList.remove('d-none')
-        document.getElementById('savebtn').classList.add('d-none')
+        btnupdate.classList.remove('d-none')
+        btnsave.classList.add('d-none')
         }
 }
 
@@ -141,12 +173,14 @@ function searchProduct(term){
                 <td><button class="btn btn-outline-warning" id='updatebttn' onclick='setProduct(${i})'>Update</button>
                 <button class="btn btn-outline-success px-3 d-none" id='savebtn' onclick='updateProduct()'>Save</button></td>
               </tr>`
+              
         }
         else{
                 // showProducts=`<tr> <td colspan='6'><p class="text-danger text-center fw-bold" id="emp">Empty....!</p></td></tr>`
                 //         document.getElementById('emp').classList.remove('d-none')
                         document.getElementById('emp').innerHTML=`
-                        <span>Empty....!</span>`
+                        <span>Empty....!</span>
+                    `
                 }
 
         document.getElementById('info').innerHTML =showProducts
@@ -201,7 +235,7 @@ function validtionDescProduct(){
 // validtion Update
     function validtionNameProductUpdate(){
         var regx = /\S$/
-        if(regx.test( document.getElementById('nameUpdate').value)==true){
+        if(regx.test( nameUpdate.children[1].value)==true){
                 document.getElementById('error').innerHTML =``
             return true
         }
@@ -212,7 +246,7 @@ function validtionDescProduct(){
     
 function validtionPriceProductUpdate(){
         var regx = /\S$/
-        if(regx.test( document.getElementById('priceUpdate').value)==true){
+        if(regx.test(priceUpdate.children[1].value)==true){
                 document.getElementById('error').innerHTML =``
             return true
         }
@@ -222,7 +256,7 @@ function validtionPriceProductUpdate(){
     }
 function validtionCatProductUpdate(){
         var regx = /\S$/
-        if(regx.test( document.getElementById('catUpdate').value)==true){
+        if(regx.test(catUpdate.children[1].value)==true){
                 document.getElementById('error').innerHTML =``
             return true
         }
@@ -232,7 +266,7 @@ function validtionCatProductUpdate(){
     }
 function validtionDescProductUpdate(){
         var regx = /\S$/
-        if(regx.test( document.getElementById('descUpdate').value)==true){
+        if(regx.test(descUpdate.children[1].value)==true){
             document.getElementById('error').innerHTML =``
             return true
         }
