@@ -131,7 +131,7 @@ function searchProduct(term){
         var showProducts=``
         for(var i =0;i<products.length;i++){
                 if(products[i].names.toLowerCase().includes(term.toLowerCase())==true){
-
+                    document.getElementById('emp').innerHTML=``
                 showProducts+=`<tr>
                 <th scope="row"> <p id='nameProduct'> ${products[i].names} </p><input type="text" class="form-control d-none " id="nameUpdate"></th>
                 <td> <p id='priceProduct'>${products[i].prices}</p><input type="text" class="form-control d-none " id="priceUpdate"></td>
