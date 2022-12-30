@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/style/all.min.css">
+        <link rel="stylesheet" href="assets/style/main.css">
+        <title>Login</title>
+</head>
+<body class="bg-light">
+        <div class="container d-flex align-item-center justify-content-center p-5">
+              <div class="login-form w-50 rounded bg-white shadow p-3 mb-5 bg-body rounded">
+                <form action="/sport.html" id="form">
+                      <div class="form-caption text-center pb-5">
+                        <h1 class="head position-relative">Login</h1>
+                      </div>
+                      <div class="container">
+                        <div class="row g-3">
+                      <div class="col-md-12">
+                        <div class="d-flex justify-content-center align-item-center border rounded ">
+                         <i class="fa-regular fa-envelope m-3"></i>
+                          <input type="email" class="form-control" id="emailInput" placeholder="Email" oninput="validationEmail()">
+                        </div>
+                        <p id="errorEmail" class="text-danger text-center"></p>
+                      </div>
+
+                <div class="col-md-12">
+                        <div class="d-flex justify-content-center align-item-center border rounded">
+                         <i class="fa-solid fa-lock m-3"></i>
+                          <input type="text" class="form-control" id="passInput" placeholder="Password" oninput="validationPassword()">
+                        </div>
+                        <p id="errorPass" class="text-danger text-center"></p>
+                      </div>
+
+                      <div class="col-md-12">
+                  <button class="btn btn-outline-warning w-100" id="logBtn"  type="submit" onclick="check(event)">Login</button>
+                </div>
+
+                    </div>
+                     </div>
+                      </form>
+              </div>
+              </div>
+              
+              </footer><script src="./assets/js/index.js"></script> 
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
