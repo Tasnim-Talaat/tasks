@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Games</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+        
+        </style>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg bg-dark navbar-dark position-fixed bottom-0 h-100 end-0 bg-transparent ">
+        <div class="container d-flex justify-content-center align-items-center flex-column ">
+          <a class="navbar-brand brand " href="#home"><img src="./assets/images/logo.png" class="" alt=""></a>
+          
+          <div class="collapse navbar-collapse " id="navbarNavDropdown">
+            <ul class="navbar-nav d-flix justify-content-center align-item-center flex-column ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Games
+                </a>
+                <ul class="dropdown-menu position-absolute bg-dark " >
+                  <li><a class="dropdown-item text-white" href="#race">Racing</a></li>
+                  <li><a class="dropdown-item text-white" href="#zombie">Zombie</a></li>
+                  <li><a class="dropdown-item text-white" href="#action">Action</a></li>
+              
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacts</a>
+             </li>
+             <li class="nav-item text-center">
+               <a class="nav-link" href="#home">
+                 <i class="fa-regular fa-user"></i>
+               </a>
+             </li>
+            </ul>
+          </div>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+<!-- start banner -->
+<header class="home" id="home">
+<div class="banner w-100 vh-100">
+  <div class="overlay d-flex justify-content-center align-items-center w-100 vh-100">
+    <div class="welcome-msg text-white text-center">
+    <h2>Welcome To Our <span class="active">Games</span> </h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem impedit laborum sint deserunt inventore!</p>
+    <button class="btn-banner p-2 rounded">Go To Play</button>
+  </div>
+  </div>
+</div>
+</header>
+<!-- start about -->
+<section class="about" id="about">
+  <div class="container">
+  <div class=" about-caption d-flex justify-content-center align-items-center py-5">
+    <h3 class="head position-relative py-2">GAME PLAY</h3>
+  </div>
+
+  <div class="about-images">
+    <div class="row d-flex align-item-center justify-content-center g-3">
+      <div class="col-md-4">
+        <div class="item position-relative overflow-hidden">
+        <img src="./assets/images/ab1.jfif" alt="" class=" w-100">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="item position-relative overflow-hidden">
+      <img src="./assets/images/ab2.jfif" alt="" class=" w-100">
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="item position-relative overflow-hidden">
+    <img src="./assets/images/ab3.jfif" alt="" class=" w-100">
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="item position-relative overflow-hidden">
+  <img src="./assets/images/ab4.jfif" alt="" class=" w-100">
+</div>
+</div>
+<div class="col-md-4">
+  <div class="item position-relative overflow-hidden">
+  <img src="./assets/images/ab5.jfif" alt="" class=" w-100">
+</div>
+</div>
+</div>
+<div class="imagesBox d-none" id="imagesBox">
+  <div class="imgContainer m-3" id="imgContainer">
+      <i id="prevBtn" class=" fas fa-circle-arrow-left"></i>
+      <i id="closeBtn" class=" fas fa-circle-xmark position-absolute end-0 top-0"></i>
+      <i id="nextBtn" class=" fas fa-circle-arrow-right"></i>
+  </div>
+</div>
+</div>
+
+   
+</section>
+
+<!-- start gemaes -->
+<!-- start racing -->
+<section class="race" id='race'>
+  <div class="container">
+    <div class=" race-caption d-flex justify-content-center align-items-center py-5">
+      <h3 class="head position-relative py-2">RACING</h3>
+    </div>
+    <div class="race-images">
+      <div class="row d-flex align-item-center justify-content-center g-3">
+        <div class="col-md-4 ">
+          <div class="item-race position-relative overflow-hidden rounded item-game">
+          <img src="./assets/images/ra2.jfif" alt="" class=" w-100">
+          <button class="btn-race p-1">Need For Speed</button>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex align-item-center justify-content-center pt-5 item-game">
+        <div class="item-race position-relative overflow-hidden rounded ">
+        <img src="./assets/images/re1.jfif" alt="" class=" w-100">
+        <button class="btn-race p-1">Aspholt 9</button>
+
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="item-race position-relative overflow-hidden rounded item-game">
+      <img src="./assets/images/re3.jfif" alt="" class=" w-100">
+      <button class="btn-race p-1">Aspholt 9 Block Wave</button>
+
+    </div>
+  </div>
+    </div>
+    </div>
+</section>
+<!-- start Zombie -->
+<section class="Zombie" id='zombie'>
+  <div class="container">
+    <div class=" Zombie-caption d-flex justify-content-center align-items-center py-5">
+      <h3 class="head position-relative py-2">ZOMBIE</h3>
+    </div>
+    <div class="Zombie-images">
+      <div class="row d-flex align-item-center justify-content-center g-3">
+        <div class="col-md-4 ">
+          <div class="item-race position-relative overflow-hidden rounded item-game" >
+          <img src="./assets/images/zo1.jfif" alt="" class=" w-100">
+          <button class="btn-race p-1">Zombie Wave I</button>
+        </div>
+      </div>
+      
+      <div class="col-md-4 ">
+        <div class="item-race position-relative overflow-hidden rounded my-5 item-game">
+        <img src="./assets/images/zo2.jfif" alt="" class=" w-100">
+        <button class="btn-race p-1">Zombie Wave II</button>
+      </div>
+    </div>
+
+    <div class="col-md-4 ">
+      <div class="item-race position-relative overflow-hidden rounded item-game">
+      <img src="./assets/images/zo3.jfif" alt="" class=" w-100">
+      <button class="btn-race p-1">Zombie Wave III</button>
+    </div>
+  </div>
+  
+    </div>
+    </div>
+</section>
+<!-- start Action -->
+<section class="action" id='action'>
+  <div class="container">
+    <div class=" action-caption d-flex justify-content-center align-items-center py-5">
+      <h3 class="head position-relative py-2">ACTION</h3>
+    </div>
+    <div class="action-images">
+      <div class="row d-flex align-item-center justify-content-center g-3">
+        <div class="col-md-4 ">
+          <div class="item-action position-relative overflow-hidden rounded item-game">
+          <img src="./assets/images/ac2.jfif" alt="" class=" w-100">
+          <button class="btn-action p-1">GTA</button>
+        </div>
+      </div>
+      
+      <div class="col-md-4 ">
+        <div class="item-action position-relative overflow-hidden rounded item-game">
+        <img src="./assets/images/ac1.jfif" alt="" class=" w-100">
+        <button class="btn-action p-1">Hunter</button>
+      </div>
+    </div>
+
+    <div class="col-md-4 ">
+      <div class="item-action position-relative overflow-hidden rounded item-game">
+      <img src="./assets/images/ac3.jfif" alt="" class=" w-100">
+      <button class="btn-action p-1">God Of War</button>
+    </div>
+  </div>
+    
+  
+    </div>
+    </div>
+</section>
+
+<!-- start contact -->
+<section class="contact py-5" id="contact">
+  <div class="container contact-us rounded  bg-light w-75">
+  <div class=" contact-caption d-flex justify-content-center align-items-center py-5">
+    <h3 class="head position-relative py-2 text-dark">CONTACTS</h3>
+  </div>
+  <div class="form-contact px-5">
+    <input type="text" placeholder="Enter Game Name" class="mb-2 form-control">
+<select name="" id="" class="form-control mb-2"> 
+  <option value="" class="text-dark">Select Game Play</option>
+  <option value="" class="active">Racing</option>
+  <option value="" class="active">Zombie</option>
+  <option value="" class="active">Action</option>
+</select> 
+ <textarea name="" id="" cols="30" rows="10"  class="mb-2 form-control"></textarea>
+<button class="btn btn-contact bg-transparent position-relative overflow-hidden mb-2 "> Send Request </button>
+  </div>
+
+</div>
+</section>
+
+<div class="imagesGame d-none" id="imagesGame">
+  <div class="imgContainer m-3" id="imgContain">
+      <i id="closeBtnn" class=" fas fa-circle-xmark position-absolute end-0 top-0"></i>
+  </div>
+</div>
+<!-- start footer -->
+<footer class="footer bg-dark py-2 d-flex justify-content-center align-items-center ">
+  <div class="copyright text-center">
+<p class="text-white">copyright ©Reserved <span class="active">Tasnim Talaat</span> </p>
+<i class="fa-brands fa-linkedin-in text-white  "></i>
+
+</div>
+
+</footer>
+<script src="./assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
