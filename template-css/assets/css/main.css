@@ -68,6 +68,7 @@ li {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .icon-up i {
@@ -165,10 +166,13 @@ li {
 .welcome h1 {
   font-size: 48px;
   font-weight: bold;
+  display: none;
 }
+
 .para {
   margin: 20px 0;
   font-size: 22px;
+  display: none;
 }
 .btn {
   background-color: transparent;
@@ -633,6 +637,8 @@ justify-content: space-evenly;
 .image-portfolio {
   width: 30%;
   height: 1000px;
+  /* display: flex;
+  flex-direction: column; */
 }
 .image-portfolio img
 {
@@ -686,7 +692,8 @@ height: 100%;
 /* start client-speak */
 .client-speak{
   height:100vh;
-
+   /* calc(100vh - 71px); */
+ 
   text-align: center;
   padding: 5%;
 }
