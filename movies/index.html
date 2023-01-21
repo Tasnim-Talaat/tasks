@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/style/all.min.css">
+        <link rel="stylesheet" href="assets/style/main.css">
+        <title> Login</title>
+</head>
+<body class="login">
+  <div class="overlay d-flex align-items-center ">
+        <div class="container d-flex align-items-center justify-content-center pt-5">
+              <div class="login-form w-50 rounded shadow p-2 mb-5 form rounded">
+                <form action="/home.html" id="form" >
+                      <div class="form-caption text-center pb-5">
+                        <p id="error" class="text-danger"></p>
+                        <img src="./assets/image/icon.png" class="image" alt="">
+                      </div>
+                      <div class="container">
+                        <div class="row g-4">
+                      <div class="col-md-12">
+                          <input type="text" class="form-control" id="nameInput" placeholder="Enter Your Name..." onsubmit="validationName()">
+                      </div>
+                      <div class="col-md-12">
+                          <input type="email" class="form-control" id="emailInput" placeholder="Enter Your Email..." oninput="validationEmail()">
+                      </div>
+
+                <div class="col-md-12">
+                          <input type="text" class="form-control" id="passInput" placeholder="Enter Your Password..." oninput="validationPassword()">
+                      </div>
+
+                      <div class="col-md-12 d-flex justify-content-between">
+                  <button class="btn btn-danger " id="logBtn"  type="submit" onclick="check(event)">Login</button>
+                  <a href="#" class=" mb-2">عارف انك اكيد نسيت كلمه السر ؟</a>
+                </div>
+
+                    </div>
+                     </div>
+                      </form>
+              </div>
+              </div> 
+          
+            </div>
+              </footer>
+              <script src="./assets/js/index.js"></script> 
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
