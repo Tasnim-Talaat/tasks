@@ -77,7 +77,7 @@ document.getElementById('logIn').innerHTML=`Hi ${myName}`
 let logOut=document.getElementById('logOut')
 logOut.addEventListener('click',()=>{
     localStorage.clear('userData')
-    window.open('/index.html')
+    window.open('/movies/index.html')
 })
 
 
