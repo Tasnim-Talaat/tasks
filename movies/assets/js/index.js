@@ -59,10 +59,10 @@ function check(v){
         users.push(data)
         // console.log(users)
         localStorage.setItem('userData',JSON.stringify(users))
-                // console.log('submit');
+               
                 // v.submit();
                 document.getElementById("form").submit();
-
+                // window.open('../../home.html')
         }
 
 }
