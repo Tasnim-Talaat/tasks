@@ -81,7 +81,10 @@ document.getElementById('forget').addEventListener('click',()=>{
         ,3000)
 })
 
-
+document.getElementById('cls-msg').addEventListener('click',()=>{
+    document.getElementById('msg').classList.add('d-none')
+            clearInterval(timeAlert)
+})
 // --------------------home
 let myData= JSON.parse(localStorage.getItem('userData'));
 // console.log(myData[0].namess);
