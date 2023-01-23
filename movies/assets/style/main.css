@@ -257,3 +257,8 @@ a{
 .header{
         background-color: var(--light-bg);       
 }
+
+
+.msg{
+        z-index: 99999;
+}

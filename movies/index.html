@@ -12,7 +12,8 @@
 <body class="login">
   <div class="overlay d-flex align-items-center ">
         <div class="container d-flex align-items-center justify-content-center pt-5">
-              <div class="login-form w-50 rounded shadow p-2 mb-5 form rounded">
+              <div class="login-form w-50 rounded shadow p-2 mb-5 form position-relative rounded d-flex align-items-center justify-content-center">
+            
                 <form action="/movies/home.html" id="form" >
                       <div class="form-caption text-center pb-5">
                         <p id="error" class="text-danger"></p>
@@ -33,16 +34,21 @@
 
                       <div class="col-md-12 d-flex justify-content-between">
                   <button class="btn btn-danger " id="logBtn"  type="submit" onclick="check(event)">Login</button>
-                  <a href="#" class=" mb-2">عارف انك اكيد نسيت كلمه السر ؟</a>
+                  <a href="#" id="forget" class=" mb-2">عارف انك اكيد نسيت كلمه السر ؟</a>
                 </div>
 
                     </div>
                      </div>
                       </form>
-              </div>
+                      <div class="alert msg bg-light shadow position-absolute w-75 h-75 d-none " id="msg">
+                        <p class="d-flex align-items-center justify-content-center text-dark fw-bold fs-3">معلــــش ههه</p>              
+                                </div> 
+
               </div> 
           
+          
             </div>
+            
               </footer>
               <script src="./assets/js/index.js"></script> 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
