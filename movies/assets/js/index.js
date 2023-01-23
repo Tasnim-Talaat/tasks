@@ -85,9 +85,9 @@ function check(v){
 //     document.getElementById('msg').classList.add('d-none')
 //             clearInterval(timeAlert)
 // })
-document.getElementById('forget').addEventListener('click',()=>{
-    swal("sorry!");
-})
+// document.getElementById('forget').addEventListener('click',()=>{
+//     swal("sorry!");
+// })
 
 
 // --------------------home
