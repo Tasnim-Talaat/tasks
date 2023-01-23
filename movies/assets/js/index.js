@@ -66,19 +66,6 @@ function check(v){
         }
 
 }
-let timeAlert
-document.getElementById('forget').addEventListener('click',()=>{
-    // console.log('eeeee');
-    // document.getElementById('msg').classList.remove('d-none')
-     timeAlert = setInterval(()=>{
-        document.getElementById('msg').classList.remove('d-none')},1000)
-        setTimeout(()=>{
-            // console.log('rrrr');
-            document.getElementById('msg').classList.add('d-none')
-            clearInterval(timeAlert)
-        }
-        ,3000)
-})
 
 // --------------------home
 let myData= JSON.parse(localStorage.getItem('userData'));
@@ -143,4 +130,17 @@ $(document).ready(function(){
 
 
 
+let timeAlert
+document.getElementById('forget').addEventListener('click',()=>{
+    // console.log('eeeee');
+    // document.getElementById('msg').classList.remove('d-none')
+     timeAlert = setInterval(()=>{
+        document.getElementById('msg').classList.remove('d-none')},1000)
+        setTimeout(()=>{
+            // console.log('rrrr');
+            document.getElementById('msg').classList.add('d-none')
+            clearInterval(timeAlert)
+        }
+        ,3000)
+})
 
