@@ -67,24 +67,29 @@ function check(v){
 
 }
 
-let timeAlert
+// let timeAlert
+// document.getElementById('forget').addEventListener('click',()=>{
+//     // console.log('eeeee');
+//     // document.getElementById('msg').classList.remove('d-none')
+//      timeAlert = setInterval(()=>{
+//         document.getElementById('msg').classList.remove('d-none')},1000)
+//         setTimeout(()=>{
+//             // console.log('rrrr');
+//             document.getElementById('msg').classList.add('d-none')
+//             clearInterval(timeAlert)
+//         }
+//         ,3000)
+// })
+
+// document.getElementById('cls-msg').addEventListener('click',()=>{
+//     document.getElementById('msg').classList.add('d-none')
+//             clearInterval(timeAlert)
+// })
 document.getElementById('forget').addEventListener('click',()=>{
-    // console.log('eeeee');
-    // document.getElementById('msg').classList.remove('d-none')
-     timeAlert = setInterval(()=>{
-        document.getElementById('msg').classList.remove('d-none')},1000)
-        setTimeout(()=>{
-            // console.log('rrrr');
-            document.getElementById('msg').classList.add('d-none')
-            clearInterval(timeAlert)
-        }
-        ,3000)
+    swal("sorry!");
 })
 
-document.getElementById('cls-msg').addEventListener('click',()=>{
-    document.getElementById('msg').classList.add('d-none')
-            clearInterval(timeAlert)
-})
+
 // --------------------home
 let myData= JSON.parse(localStorage.getItem('userData'));
 // console.log(myData[0].namess);
