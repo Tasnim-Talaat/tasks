@@ -99,7 +99,7 @@ document.getElementById('logIn').innerHTML=`Hi ${myName}`
 let logOut=document.getElementById('logOut')
 logOut.addEventListener('click',()=>{
     localStorage.clear('userData')
-    window.open('/movies/index.html')
+    window.open('/tasks/movies/index.html')
 })
 
 
