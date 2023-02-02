@@ -12,7 +12,11 @@ let x ;
           <div className="product bg-info p-2 rounded shadow position-relative">
             <h3>Name: {name}</h3>
             <h4>Price: {price}</h4>
-           <input type="text" id='editCount' className='form-control d-none' onInput={(e)=>{
+            
+         
+            <div className="d-flex justify-content-evenly">
+            <i className="btn btn-success fa-solid fa-plus py-2 fs-5" onClick={()=>this.props.add(this.props.productIndex)}></i>
+            <input type="text" id='editCount' className='form-control d-none w-50' onInput={(e)=>{
             console.log(e.target.value)
            x=e.target.value
           }
@@ -27,7 +31,8 @@ let x ;
             ) : (
               ""
             )}
-
+            <i className="btn btn-success fa-solid fa-minus py-2 fs-5" onClick={()=>this.props.remove(this.props.productIndex)}></i>
+            </div>
             <button
               onClick={() => this.props.delete(this.props.productIndex)}
               className="btn btn-danger btn-sm w-100 my-2"

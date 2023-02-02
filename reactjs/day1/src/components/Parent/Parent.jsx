@@ -41,24 +41,53 @@ export default class Parent extends Component {
     this.setState({ products: myProducts });
 
   };
+  addProduct = (productIndex) => {
+
+    // 1-DeepCopy
+    let myProducts = [...this.state.products];
+   
+
+    // // 2-Action
+    myProducts[productIndex].count++;
+    
+    
+    // // 3-setState
+    this.setState({ products: myProducts });
+
+  };
+  removeProduct = (productIndex) => {
+
+    // 1-DeepCopy
+    let myProducts = [...this.state.products];
+   
+
+    // // 2-Action
+    myProducts[productIndex].count--;
+    
+    
+    // // 3-setState
+    this.setState({ products: myProducts });
+
+  };
 
   render() {
     // console.log("Render Method");
-    
     return (
       <>
         <div className="container py-3 bg-dark">
           <h1 className=" bg-danger rounded shadow p-2">Parent Component</h1>
           <div className="row g-5">
-            {this.state.products.map((product, index) => (
+            {this.state.products.map((product, index) => 
               <Child
+              key={index}
                 delete={this.deleteProduct}
                 productInfo={product}
                 productIndex={index}
                 update={this.updateProduct}
-
+                add={this.addProduct}
+                remove={this.removeProduct}
               />
-            ))
+            )
             }
           </div>
         </div>
