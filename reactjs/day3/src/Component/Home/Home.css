@@ -1,0 +1,20 @@
+.banner{
+        background-image: url(../../../public/bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 50vh;
+}
+.overlay{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0,0, .7);
+}
+.images{
+top:80%;
+left: 10%;
+}
+.images img{
+   height: 300px;     
+}
